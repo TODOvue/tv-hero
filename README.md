@@ -130,11 +130,11 @@ import { TvHero } from '@todovue/tv-hero'
 
 ---
 ## Component Registration Options
-| Approach                                                    | When to use                                    |
-|-------------------------------------------------------------|------------------------------------------------|
-| Global via `app.use(TvHero)`                                | Multiple hero sections across your app         |
-| Local named import `{ TvHero }`                             | Isolated usage or code-splitting scenarios     |
-| Direct default import `import TvHero from '@todovue/tv-hero'` | Single usage or manual registration            |
+| Approach                                                      | When to use                                |
+|---------------------------------------------------------------|--------------------------------------------|
+| Global via `app.use(TvHero)`                                  | Multiple hero sections across your app     |
+| Local named import `{ TvHero }`                               | Isolated usage or code-splitting scenarios |
+| Direct default import `import TvHero from '@todovue/tv-hero'` | Single usage or manual registration        |
 
 ---
 ## Props
