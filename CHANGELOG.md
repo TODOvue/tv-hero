@@ -46,5 +46,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Various customization examples
 
 ---
-[1.0.1]: https://github.com/TODOvue/tv-hero/pull/2/files
+[1.0.1]: https://github.com/TODOvue/tv-hero/pull/3/files
 [1.0.0]: https://github.com/TODOvue/tv-hero/pull/1/files
