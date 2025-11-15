@@ -9,6 +9,7 @@
 <script setup>
 import { ref } from "vue";
 import { TvHero } from "@todovue/tv-hero";
+import "@todovue/tv-hero/style.css";
 
 const configHero = ref({
   alt: "TODOvue Logo",
