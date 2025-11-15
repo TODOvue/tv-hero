@@ -64,4 +64,4 @@ const { handleClick, handleClickSecondary, custom, hero } = useHero(props, emit)
   </div>
 </template>
 
-<style scoped lang="scss" src="../assets/scss/style.scss"></style>
+<style></style>

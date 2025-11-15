@@ -25,6 +25,7 @@ A customizable, responsive Vue 3 hero component designed for web applications. P
 - [Examples](#examples)
 - [Accessibility](#accessibility)
 - [SSR Notes](#ssr-notes)
+- [Styles Usage](#styles-usage)
 - [Development](#development)
 - [Contributing](#contributing)
 - [License](#license)
@@ -62,6 +63,7 @@ Global registration (main.js / main.ts):
 ```js
 import { createApp } from 'vue'
 import App from './App.vue'
+import '@todovue/tv-hero/style.css'
 import TvHero from '@todovue/tv-hero'
 
 createApp(App)
@@ -71,6 +73,7 @@ createApp(App)
 Local import inside a component:
 ```vue
 <script setup>
+import '@todovue/tv-hero/style.css'
 import { TvHero } from '@todovue/tv-hero'
 
 const heroConfig = {
@@ -96,6 +99,7 @@ function onButtonClick() {
 Create a plugin file: `plugins/tv-hero.client.ts` (or without suffix for SSR-safe usage):
 ```ts
 import { defineNuxtPlugin } from '#app'
+import '@todovue/tv-hero/style.css'
 import TvHero from '@todovue/tv-hero'
 
 export default defineNuxtPlugin(nuxtApp => {
@@ -124,6 +128,7 @@ const handleAction = () => {
 Optional direct import (no plugin):
 ```vue
 <script setup>
+import '@todovue/tv-hero/style.css'
 import { TvHero } from '@todovue/tv-hero'
 </script>
 ```
@@ -332,6 +337,31 @@ Set `isEntry` to `true` for blog post headers (buttons are hidden):
 - **Safe for SSR**: Works in Nuxt 3, Vite SSR, and other server environments
 - **Image optimization**: Works with Nuxt Image and other SSR image tools
 - **Composable pattern**: Uses Vue 3 Composition API with computed properties
+
+---
+## Styles Usage
+
+### Vue 3 / Vite SPA
+```ts
+// main.ts
+import { createApp } from 'vue'
+import App from './App.vue'
+
+import { TvHero } from '@todovue/tv-hero'
+import '@todovue/tv-hero/style.css'
+
+const app = createApp(App)
+app.component('TvHero', TvHero)
+app.mount('#app')
+```
+
+### Nuxt 3 / 4
+```ts
+// nuxt.config.ts
+export default defineNuxtConfig({
+  css: ['@todovue/tv-hero/style.css'],
+})
+```
 
 ---
 ## Development

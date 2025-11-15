@@ -1,7 +1,7 @@
 @use "variables";
 @use "mixins";
-@use "global";
 @use "sass:color";
+@import '@todovue/tv-button/style.css';
 
 %alignCenterFlex {
   align-items: center;
@@ -9,15 +9,13 @@
   justify-content: center;
 }
 
-.dark-mode {
-  & .tv-hero-body {
-    @include mixins.backgroundColorAndTextColor(variables.$dark-card-bg, variables.$dark-text);
+.tv-hero-body {
+  @include mixins.backgroundColorAndTextColor(variables.$dark-card-bg, variables.$dark-text);
 
-    & .tv-hero-title {
-      & .tv-hero-separator {
-        background: variables.$light-button-text;
-        box-shadow: 0 0 10px 0 variables.$dark-button-text;
-      }
+  & .tv-hero-title {
+    & .tv-hero-separator {
+      background: variables.$light-button-text;
+      box-shadow: 0 0 10px 0 variables.$dark-button-text;
     }
   }
 }

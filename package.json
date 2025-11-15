@@ -29,7 +29,8 @@
     ".": {
       "import": "./dist/tv-hero.es.js",
       "require": "./dist/tv-hero.cjs.js"
-    }
+    },
+    "./style.css": "./dist/tv-hero.css"
   },
   "main": "dist/tv-hero.cjs.js",
   "module": "dist/tv-hero.es.js",
@@ -38,6 +39,11 @@
     "dist",
     "LICENSE",
     "README.md"
+  ],
+  "sideEffects": [
+    "*.css",
+    "*.scss",
+    "dist/*.css"
   ],
   "engines": {
     "node": ">=20.19.0"
@@ -55,7 +61,6 @@
     "@vitejs/plugin-vue": "^6.0.0",
     "sass": "^1.0.0",
     "vite": "^7.0.0",
-    "vite-plugin-css-injected-by-js": "^3.0.0",
     "vite-plugin-dts": "^4.0.0"
   },
   "dependencies": {
