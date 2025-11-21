@@ -1,12 +1,19 @@
-<p align="center"><img width="150" src="https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/logo.png?alt=media&token=d8eb592f-e4a9-4b02-8aff-62d337745f41" alt="TODOvue logo">
+<p align="center"><img width="150" src="https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763663056/uqqtkgp1lg3xdplutpga.png" alt="TODOvue logo">
 </p>
 
 # TODOvue Hero (TvHero)
 A customizable, responsive Vue 3 hero component designed for web applications. Perfect for creating impactful landing sections with images, titles, descriptions, and call-to-action buttons. Fully compatible with Single Page Apps and Server-Side Rendered (SSR) environments like Nuxt 3.
 
 [![npm](https://img.shields.io/npm/v/@todovue/tv-hero.svg)](https://www.npmjs.com/package/@todovue/tv-hero)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ba1c1123-6711-4ffb-80a7-82f2402bb386/deploy-status)](https://app.netlify.com/projects/tv-hero/deploys)
 [![npm downloads](https://img.shields.io/npm/dm/@todovue/tv-hero.svg)](https://www.npmjs.com/package/@todovue/tv-hero)
+[![npm total downloads](https://img.shields.io/npm/dt/@todovue/tv-hero.svg)](https://www.npmjs.com/package/@todovue/tv-hero)
 ![License](https://img.shields.io/github/license/TODOvue/tv-hero)
+![Release Date](https://img.shields.io/github/release-date/TODOvue/tv-hero)
+![Bundle Size](https://img.shields.io/bundlephobia/minzip/@todovue/tv-hero)
+![Node Version](https://img.shields.io/node/v/@todovue/tv-hero)
+![Last Commit](https://img.shields.io/github/last-commit/TODOvue/tv-hero)
+![Stars](https://img.shields.io/github/stars/TODOvue/tv-hero?style=social)
 
 > Demo: https://tv-hero.netlify.app/
 
@@ -64,6 +71,7 @@ Global registration (main.js / main.ts):
 import { createApp } from 'vue'
 import App from './App.vue'
 import '@todovue/tv-hero/style.css'
+import '@todovue/tv-button/style.css'
 import TvHero from '@todovue/tv-hero'
 
 createApp(App)
@@ -74,6 +82,7 @@ Local import inside a component:
 ```vue
 <script setup>
 import '@todovue/tv-hero/style.css'
+import '@todovue/tv-button/style.css'
 import { TvHero } from '@todovue/tv-hero'
 
 const heroConfig = {
@@ -95,17 +104,17 @@ function onButtonClick() {
 ```
 
 ---
-## Nuxt 3 / SSR Usage
+## Nuxt 4 / SSR Usage
 Create a plugin file: `plugins/tv-hero.client.ts` (or without suffix for SSR-safe usage):
 ```ts
-import { defineNuxtPlugin } from '#app'
-import '@todovue/tv-hero/style.css'
-import TvHero from '@todovue/tv-hero'
-
-export default defineNuxtPlugin(nuxtApp => {
-  nuxtApp.vueApp.use(TvHero)
+// nuxt.config.ts
+export default defineNuxtConfig({
+  modules: [
+    '@todovue/tv-card/nuxt'
+  ]
 })
 ```
+
 Use anywhere in your Nuxt app:
 ```vue
 <template>
@@ -129,6 +138,7 @@ Optional direct import (no plugin):
 ```vue
 <script setup>
 import '@todovue/tv-hero/style.css'
+import '@todovue/tv-button/style.css'
 import { TvHero } from '@todovue/tv-hero'
 </script>
 ```

@@ -7,15 +7,15 @@ const TvHero = defineAsyncComponent(/* webpackChunkName: "TvHero" */() => import
 </script>
 
 <template>
-  <tv-demo
+  <TvDemo
     :component="TvHero"
     :variants="demos"
     hide-background
-    nameComponent="TvHero"
-    npmInstall="@todovue/tv-hero"
-    sourceLink="https://github.com/TODOvue/tv-hero"
-    urlClone="https://github.com/TODOvue/tv-hero.git"
-    version="1.0.1"
+    component-name="TvHero"
+    npm-install="@todovue/tv-hero"
+    source-link="https://github.com/TODOvue/tv-hero"
+    url-clone="https://github.com/TODOvue/tv-hero.git"
+    version="1.1.0"
   />
 </template>
 
