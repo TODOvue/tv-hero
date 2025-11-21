@@ -10,14 +10,14 @@ export const demos = [
   {
     id: 1,
     title: "TODOvue main hero",
+    description: "Main hero for TODOvue blog.",
     propsData: {
       configHero: {
         title: "TODOvue Blog",
         description:
           "Introducing my Vue.js blog! Get ready to dive into the world of Vue.js and discover how this powerful JavaScript framework can help you build beautiful and dynamic user interfaces for your web applications.",
         button: "View all blogs",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/logo.png?alt=media&token=4d64783f-2259-49cc-a6b4-68e58ce3b227",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763663056/uqqtkgp1lg3xdplutpga.png",
         alt: "TODOvue Logo",
       },
     },
@@ -26,6 +26,7 @@ export const demos = [
   {
     id: 2,
     title: "TODOvue main hero with secondary button",
+    description: "Main hero for TODOvue blog with secondary button.",
     propsData: {
       configHero: {
         title: "TODOvue Blog",
@@ -33,8 +34,7 @@ export const demos = [
           "Introducing my Vue.js blog! Get ready to dive into the world of Vue.js and discover how this powerful JavaScript framework can help you build beautiful and dynamic user interfaces for your web applications.",
         button: "View all blogs",
         buttonSecondary: "View last blog",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/logo.png?alt=media&token=4d64783f-2259-49cc-a6b4-68e58ce3b227",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763663056/uqqtkgp1lg3xdplutpga.png",
         alt: "TODOvue Logo",
       },
     },
@@ -43,6 +43,7 @@ export const demos = [
   {
     id: 3,
     title: "TODOvue main hero with custom colors",
+    description: "Main hero for TODOvue blog with secondary button and custom colors.",
     propsData: {
       configHero: {
         title: "TODOvue Blog",
@@ -50,8 +51,7 @@ export const demos = [
           "Introducing my Vue.js blog! Get ready to dive into the world of Vue.js and discover how this powerful JavaScript framework can help you build beautiful and dynamic user interfaces for your web applications.",
         button: "View all blogs",
         buttonSecondary: "View last blog",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/logo.png?alt=media&token=4d64783f-2259-49cc-a6b4-68e58ce3b227",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763663056/uqqtkgp1lg3xdplutpga.png",
         alt: "TODOvue Logo",
       },
       customHero: {
@@ -68,13 +68,13 @@ export const demos = [
   {
     id: 4,
     title: "TODOvue entry hero",
+    description: "Entry hero for TODOvue blog.",
     propsData: {
       configHero: {
         title: "What is Vue.js?",
         description:
           "Vue.js is a progressive JavaScript framework for building user interfaces. It is designed from the ground up to be incrementally adoptable, and can easily scale between a library and a full-featured framework. It is also one of the most popular JavaScript frameworks, with over 1 million GitHub stars and 100,000+ contributors.",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/vue.webp?alt=media&token=7b717129-29c3-4f36-846d-c0243b28e216",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763701508/jarnmxxvmhbisvpzzfwu.webp",
         alt: "What is Vue.js?",
       },
       isEntry: true,
@@ -82,15 +82,15 @@ export const demos = [
     html: EntryHero,
   },
   {
-    id: 4,
+    id: 5,
     title: "TODOvue entry hero with custom colors",
+    description: "Entry hero for TODOvue blog with custom colors.",
     propsData: {
       configHero: {
         title: "What is Vue.js?",
         description:
           "Vue.js is a progressive JavaScript framework for building user interfaces. It is designed from the ground up to be incrementally adoptable, and can easily scale between a library and a full-featured framework. It is also one of the most popular JavaScript frameworks, with over 1 million GitHub stars and 100,000+ contributors.",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/cards%2Fcode-g310d81d24_640.webp?alt=media&token=c25e7d00-9386-4823-bf56-f0d1081069d1",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763701538/kua2i5ayhbne1dmmexfd.webp",
         alt: "What is Vue.js?",
       },
       isEntry: true,
@@ -102,8 +102,9 @@ export const demos = [
     html: EntryHeroCustom,
   },
   {
-    id: 5,
+    id: 6,
     title: "TODOvue entry without image hero",
+    description: "Entry hero for TODOvue blog without image.",
     propsData: {
       configHero: {
         title: "What is Vue.js?",
@@ -115,8 +116,9 @@ export const demos = [
     html: EntryWithoutImage,
   },
   {
-    id: 6,
+    id: 7,
     title: "TODOvue entry without image hero with custom colors",
+    description: "Entry hero for TODOvue blog without image and with custom colors.",
     propsData: {
       configHero: {
         title: "What is Vue.js?",

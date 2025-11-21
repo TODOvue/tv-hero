@@ -1,6 +1,6 @@
 <template>
   <tv-hero
-    :configHero="configHero"
+    :config-hero="configHero"
     @click-button="handleClick"
   />
 </template>
@@ -9,6 +9,7 @@
 import { ref } from "vue";
 import { TvHero } from "@todovue/tv-hero";
 import "@todovue/tv-hero/style.css";
+import "@todovue/tv-button/style.css";
 
 const configHero = ref({
   alt: "TODOvue Logo",

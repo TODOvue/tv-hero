@@ -1,15 +1,21 @@
-import TvHero from './components/TvHero.vue'
+import type { App, Plugin } from 'vue'
+import _TvHero from './components/TvHero.vue'
 import './style.scss'
 
-(TvHero as any).install = (app: any) => {
+const TvHero = _TvHero as typeof _TvHero & Plugin;
+TvHero.install = (app: App) => {
   app.component('TvHero', TvHero)
 };
 
-export const TvHeroPlugin = {
-  install(app: any) {
-    app.component('TvHero', TvHero)
+export { TvHero }
+
+export const TvHeroPlugin: Plugin = {
+  install: TvHero.install
+};
+export default TvHero;
+
+declare module 'vue' {
+  export interface GlobalComponents {
+    TvHero: typeof TvHero;
   }
 }
-
-export { TvHero }
-export default TvHero

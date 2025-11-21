@@ -1,4 +1,4 @@
-<p align="center"><img width="150" src="https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/logo.png?alt=media&token=d8eb592f-e4a9-4b02-8aff-62d337745f41" alt="TODOvue logo">
+<p align="center"><img width="150" src="https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763663056/uqqtkgp1lg3xdplutpga.png" alt="TODOvue logo">
 </p>
 
 # TODOvue Hero (TvHero)
@@ -64,6 +64,7 @@ Global registration (main.js / main.ts):
 import { createApp } from 'vue'
 import App from './App.vue'
 import '@todovue/tv-hero/style.css'
+import '@todovue/tv-button/style.css'
 import TvHero from '@todovue/tv-hero'
 
 createApp(App)
@@ -74,6 +75,7 @@ Local import inside a component:
 ```vue
 <script setup>
 import '@todovue/tv-hero/style.css'
+import '@todovue/tv-button/style.css'
 import { TvHero } from '@todovue/tv-hero'
 
 const heroConfig = {
@@ -95,17 +97,17 @@ function onButtonClick() {
 ```
 
 ---
-## Nuxt 3 / SSR Usage
+## Nuxt 4 / SSR Usage
 Create a plugin file: `plugins/tv-hero.client.ts` (or without suffix for SSR-safe usage):
 ```ts
-import { defineNuxtPlugin } from '#app'
-import '@todovue/tv-hero/style.css'
-import TvHero from '@todovue/tv-hero'
-
-export default defineNuxtPlugin(nuxtApp => {
-  nuxtApp.vueApp.use(TvHero)
+// nuxt.config.ts
+export default defineNuxtConfig({
+  modules: [
+    '@todovue/tv-card/nuxt'
+  ]
 })
 ```
+
 Use anywhere in your Nuxt app:
 ```vue
 <template>
@@ -129,6 +131,7 @@ Optional direct import (no plugin):
 ```vue
 <script setup>
 import '@todovue/tv-hero/style.css'
+import '@todovue/tv-button/style.css'
 import { TvHero } from '@todovue/tv-hero'
 </script>
 ```

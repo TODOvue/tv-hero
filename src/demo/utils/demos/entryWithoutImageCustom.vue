@@ -1,8 +1,8 @@
 <template>
   <tv-hero
-    :configHero="configHero"
-    :customHero="customHero"
-    isEntry
+    :config-hero="configHero"
+    :custom-hero="customHero"
+    is-entry
   />
 </template>
 
@@ -10,6 +10,7 @@
 import { ref } from "vue";
 import { TvHero } from "@todovue/tv-hero";
 import "@todovue/tv-hero/style.css";
+import "@todovue/tv-button/style.css";
 
 const configHero = ref({
   description: "Introducing my Vue.js blog!...",
