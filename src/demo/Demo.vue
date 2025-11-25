@@ -15,7 +15,7 @@ const TvHero = defineAsyncComponent(/* webpackChunkName: "TvHero" */() => import
     npm-install="@todovue/tv-hero"
     source-link="https://github.com/TODOvue/tv-hero"
     url-clone="https://github.com/TODOvue/tv-hero.git"
-    version="1.1.0"
+    version="1.1.1"
   />
 </template>
 
