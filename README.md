@@ -5,7 +5,6 @@
 A customizable, responsive Vue 3 hero component designed for web applications. Perfect for creating impactful landing sections with images, titles, descriptions, and call-to-action buttons. Fully compatible with Single Page Apps and Server-Side Rendered (SSR) environments like Nuxt 3.
 
 [![npm](https://img.shields.io/npm/v/@todovue/tv-hero.svg)](https://www.npmjs.com/package/@todovue/tv-hero)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ba1c1123-6711-4ffb-80a7-82f2402bb386/deploy-status)](https://app.netlify.com/projects/tv-hero/deploys)
 [![npm downloads](https://img.shields.io/npm/dm/@todovue/tv-hero.svg)](https://www.npmjs.com/package/@todovue/tv-hero)
 [![npm total downloads](https://img.shields.io/npm/dt/@todovue/tv-hero.svg)](https://www.npmjs.com/package/@todovue/tv-hero)
 ![License](https://img.shields.io/github/license/TODOvue/tv-hero)
@@ -15,7 +14,7 @@ A customizable, responsive Vue 3 hero component designed for web applications. P
 ![Last Commit](https://img.shields.io/github/last-commit/TODOvue/tv-hero)
 ![Stars](https://img.shields.io/github/stars/TODOvue/tv-hero?style=social)
 
-> Demo: https://tv-hero.netlify.app/
+> Demo: https://ui.todovue.blog/hero
 
 ---
 ## Table of Contents
