@@ -169,6 +169,8 @@
 
 @media (max-width: 640px) {
   .tv-hero-body {
+    padding: 0 1rem;
+
     & .tv-hero {
       align-items: center;
       flex-direction: column;
