@@ -15,6 +15,11 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  imagePosition: {
+    type: String,
+    default: "left",
+    validator: (value) => ["left", "right"].includes(value),
+  },
 });
 
 const emit = defineEmits(['clickButton', 'clickSecondaryButton']);
@@ -29,7 +34,13 @@ const { handleClick, handleClickSecondary, custom, hero } = useHero(props, emit)
     :class="{ 'tv-hero-entry': isEntry }"
     :style="custom?.customHero"
   >
-    <div class="tv-hero" :class="{ 'tv-hero-full': !hero.image && !$slots.image }">
+    <div
+      class="tv-hero"
+      :class="{
+        'tv-hero-full': !hero.image && !$slots.image,
+        'tv-hero-reverse': imagePosition === 'right',
+      }"
+    >
       <div v-if="hero.image || $slots.image" class="tv-hero-image">
         <slot name="image">
           <img :src="hero.image" :alt="hero.alt || 'Hero image'" />

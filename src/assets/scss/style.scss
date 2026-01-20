@@ -88,6 +88,15 @@
         justify-content: center;
       }
     }
+
+    &.tv-hero-reverse {
+      flex-direction: row-reverse;
+
+      & .tv-hero-image {
+        margin-right: 0;
+        margin-left: 2rem;
+      }
+    }
   }
 
   &.tv-hero-entry {

@@ -145,11 +145,12 @@ import { TvHero } from '@todovue/tv-hero'
 | Direct default import `import TvHero from '@todovue/tv-hero'` | Single usage or manual registration        |
 
 ## Props
-| Prop         | Type    | Default | Description                                                              |
-|--------------|---------|---------|--------------------------------------------------------------------------|
-| configHero   | Object  | {}      | Main configuration object with title, description, buttons, and image.   |
-| customHero   | Object  | {}      | Custom styling object for colors and themes.                             |
-| isEntry      | Boolean | false   | Enables entry/article layout mode (full-width, no buttons).              |
+| Prop          | Type    | Default | Description                                                            |
+|---------------|---------|---------|------------------------------------------------------------------------|
+| configHero    | Object  | {}      | Main configuration object with title, description, buttons, and image. |
+| customHero    | Object  | {}      | Custom styling object for colors and themes.                           |
+| isEntry       | Boolean | false   | Enables entry/article layout mode (full-width, no buttons).            |
+| imagePosition | String  | 'left'  | Controls image position: 'left' or 'right'.                            |
 
 ## Events
 | Event name (kebab)        | Description                                 |

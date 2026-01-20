@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Introduced slot support to allow for fully customizable content within components.
+- Introduced the `imagePosition` property to provide granular control over layout placement.
+- Added a reverse layout option to allow for flexible positioning of image and text elements.
 
 ### Changed
 - Updated the documentation to include instructions and examples for implementing the new slot functionality.

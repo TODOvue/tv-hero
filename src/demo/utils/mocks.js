@@ -6,6 +6,7 @@ import EntryHeroCustom from "./demos/entryHeroCustom.vue?raw";
 import EntryWithoutImage from "./demos/entryWithoutImage.vue?raw";
 import EntryWithoutImageCustom from "./demos/entryWithoutImageCustom.vue?raw";
 import WithSlots from "./demos/withSlots.vue?raw";
+import RightImage from "./demos/rightImage.vue?raw";
 
 export const demos = [
   {
@@ -147,5 +148,22 @@ export const demos = [
       },
     },
     html: WithSlots,
+  },
+  {
+    id: 9,
+    title: "TODOvue hero with right image",
+    description: "Hero showing the image on the right side.",
+    propsData: {
+      configHero: {
+        title: "Right Aligned Image",
+        description:
+          "This hero has the image positioned on the right side using the new imagePosition prop.",
+        button: "Action",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763663056/uqqtkgp1lg3xdplutpga.png",
+        alt: "TODOvue Logo",
+      },
+      imagePosition: "right",
+    },
+    html: RightImage,
   },
 ];
