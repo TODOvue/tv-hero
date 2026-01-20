@@ -4,6 +4,8 @@
 
 <script setup>
 import { TvHero } from "todovue-hero";
+import "todovue-hero/style.css";
+import "todovue-button/style.css";
 
 const configHero = {
   title: "Right Aligned Image",
