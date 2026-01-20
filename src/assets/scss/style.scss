@@ -17,6 +17,28 @@
       box-shadow: 0 0 10px 0 variables.$dark-button-text;
     }
   }
+
+  &.tv-hero-background-mode {
+    padding: 0;
+
+    .tv-hero {
+      width: 100%;
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .tv-hero-title,
+      .tv-hero-description {
+        color: #ffffff;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .tv-hero-separator {
+        background: #ffffff;
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
 }
 
 .light-mode {

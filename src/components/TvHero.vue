@@ -1,4 +1,5 @@
 <script setup>
+import { computed } from 'vue';
 import { TvButton } from '@todovue/tv-button';
 import useHero from '../composable/useHero.js';
 
@@ -20,28 +21,46 @@ const props = defineProps({
     default: "left",
     validator: (value) => ["left", "right"].includes(value),
   },
+  isBackgroundImage: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const emit = defineEmits(['clickButton', 'clickSecondaryButton']);
 
 const { handleClick, handleClickSecondary, custom, hero } = useHero(props, emit);
+
+const heroStyle = computed(() => {
+  const styles = { ...custom.value?.customHero };
+  if (props.isBackgroundImage && hero.value?.image) {
+    styles.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${hero.value.image})`;
+    styles.backgroundSize = "cover";
+    styles.backgroundPosition = "center";
+    styles.color = "#ffffff"; // Force white text for readability
+  }
+  return styles;
+});
 </script>
 
 <template>
   <div
     v-if="hero"
     class="tv-hero-body"
-    :class="{ 'tv-hero-entry': isEntry }"
-    :style="custom?.customHero"
+    :class="{
+      'tv-hero-entry': isEntry,
+      'tv-hero-background-mode': isBackgroundImage,
+    }"
+    :style="heroStyle"
   >
     <div
       class="tv-hero"
       :class="{
-        'tv-hero-full': !hero.image && !$slots.image,
-        'tv-hero-reverse': imagePosition === 'right',
+        'tv-hero-full': (!hero.image && !$slots.image) || isBackgroundImage,
+        'tv-hero-reverse': imagePosition === 'right' && !isBackgroundImage,
       }"
     >
-      <div v-if="hero.image || $slots.image" class="tv-hero-image">
+      <div v-if="(hero.image || $slots.image) && !isBackgroundImage" class="tv-hero-image">
         <slot name="image">
           <img :src="hero.image" :alt="hero.alt || 'Hero image'" />
         </slot>
