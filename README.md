@@ -16,12 +16,11 @@ A customizable, responsive Vue 3 hero component designed for web applications. P
 
 > Demo: https://ui.todovue.blog/hero
 
----
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
 - [Quick Start (SPA)](#quick-start-spa)
-- [Nuxt 3 / SSR Usage](#nuxt-3--ssr-usage)
+- [Nuxt 4 / SSR Usage](#nuxt-4--ssr-usage)
 - [Component Registration Options](#component-registration-options)
 - [Props](#props)
 - [Events](#events)
@@ -36,7 +35,6 @@ A customizable, responsive Vue 3 hero component designed for web applications. P
 - [Contributing](#contributing)
 - [License](#license)
 
----
 ## Features
 - **Flexible layouts**: Standard hero with image or full-width text-only hero
 - **Entry mode**: Special layout optimized for blog posts and article pages
@@ -48,7 +46,6 @@ A customizable, responsive Vue 3 hero component designed for web applications. P
 - **TypeScript support**: Full type definitions included
 - **Zero configuration**: Works out of the box with sensible defaults
 
----
 ## Installation
 Using npm:
 ```bash
@@ -63,7 +60,6 @@ Using pnpm:
 pnpm add @todovue/tv-hero
 ```
 
----
 ## Quick Start (SPA)
 Global registration (main.js / main.ts):
 ```js
@@ -102,7 +98,6 @@ function onButtonClick() {
 </template>
 ```
 
----
 ## Nuxt 4 / SSR Usage
 Create a plugin file: `plugins/tv-hero.client.ts` (or without suffix for SSR-safe usage):
 ```ts
@@ -142,7 +137,6 @@ import { TvHero } from '@todovue/tv-hero'
 </script>
 ```
 
----
 ## Component Registration Options
 | Approach                                                      | When to use                                |
 |---------------------------------------------------------------|--------------------------------------------|
@@ -150,7 +144,6 @@ import { TvHero } from '@todovue/tv-hero'
 | Local named import `{ TvHero }`                               | Isolated usage or code-splitting scenarios |
 | Direct default import `import TvHero from '@todovue/tv-hero'` | Single usage or manual registration        |
 
----
 ## Props
 | Prop         | Type    | Default | Description                                                              |
 |--------------|---------|---------|--------------------------------------------------------------------------|
@@ -158,7 +151,6 @@ import { TvHero } from '@todovue/tv-hero'
 | customHero   | Object  | {}      | Custom styling object for colors and themes.                             |
 | isEntry      | Boolean | false   | Enables entry/article layout mode (full-width, no buttons).              |
 
----
 ## Events
 | Event name (kebab)        | Description                                 |
 |---------------------------|---------------------------------------------|
@@ -174,7 +166,33 @@ Usage:
 />
 ```
 
----
+## Slots
+The component exposes several slots to allow full customization of content areas. When using slots, the corresponding props in `configHero` act as defaults or can be omitted.
+
+| Slot Name     | Description                                                          |
+|---------------|----------------------------------------------------------------------|
+| `image`       | Replaces the hero image area. Useful for custom images or video.     |
+| `title`       | Replaces the title text. Use this for rich HTML titles.              |
+| `description` | Replaces the description text. Perfect for complex HTML content.     |
+| `actions`     | Replaces the buttons. Use this to add custom forms or extra buttons. |
+
+**Example of Slot Usage:**
+```vue
+<TvHero :configHero="heroConfig">
+  <template #title>
+    Hello <span class="highlight">World</span>
+  </template>
+  
+  <template #description>
+    <p>This is a <strong>custom</strong> description with HTML.</p>
+  </template>
+  
+  <template #actions>
+    <button class="my-custom-btn">Join Now</button>
+  </template>
+</TvHero>
+```
+
 ## Configuration Object (configHero)
 The `configHero` prop accepts an object with the following properties:
 
@@ -199,7 +217,6 @@ const configHero = {
 }
 ```
 
----
 ## Customization (Styles / Theming)
 The `customHero` prop allows you to override default colors and styles:
 
@@ -232,7 +249,6 @@ The component automatically:
 - Creates a decorative separator bar below the title with matching colors
 - Applies box-shadow effects for visual depth
 
----
 ## Layout Modes
 
 ### Standard Hero (with image)
@@ -265,7 +281,6 @@ Set `isEntry` to `true` for blog post headers (buttons are hidden):
 />
 ```
 
----
 ## Examples
 
 ### Basic Hero
@@ -332,7 +347,6 @@ Set `isEntry` to `true` for blog post headers (buttons are hidden):
 />
 ```
 
----
 ## Accessibility
 - **Semantic HTML**: Uses proper heading hierarchy (`<h1>` for title)
 - **Alt text**: Always provide `alt` property when using images
@@ -340,14 +354,12 @@ Set `isEntry` to `true` for blog post headers (buttons are hidden):
 - **Keyboard navigation**: Full keyboard support for interactive elements
 - **Color contrast**: Default theme meets WCAG AA standards
 
----
 ## SSR Notes
 - **Zero DOM dependencies**: No direct `window` or `document` access
 - **Safe for SSR**: Works in Nuxt 3, Vite SSR, and other server environments
 - **Image optimization**: Works with Nuxt Image and other SSR image tools
 - **Composable pattern**: Uses Vue 3 Composition API with computed properties
 
----
 ## Styles Usage
 
 ### Vue 3 / Vite SPA
@@ -372,7 +384,6 @@ export default defineNuxtConfig({
 })
 ```
 
----
 ## Development
 ```bash
 git clone https://github.com/TODOvue/tv-hero.git
@@ -383,19 +394,15 @@ npm run build   # build library
 ```
 The demo playground includes multiple examples showcasing different configurations and customization options.
 
----
 ## Contributing
 PRs and issues welcome! See [CONTRIBUTING.md](./CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md).
 
----
 ### Dependencies
 - **[@todovue/tv-button](https://www.npmjs.com/package/@todovue/tv-button)**: Powers the call-to-action buttons
 - **Vue 3**: Peer dependency (^3.0.0)
 
----
 ## License
 MIT © TODOvue
 
----
 ### Attributions
 Crafted for the TODOvue component ecosystem

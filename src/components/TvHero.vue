@@ -29,35 +29,47 @@ const { handleClick, handleClickSecondary, custom, hero } = useHero(props, emit)
     :class="{ 'tv-hero-entry': isEntry }"
     :style="custom?.customHero"
   >
-    <div class="tv-hero" :class="{ 'tv-hero-full': !hero.image }">
-      <div v-if="hero.image" class="tv-hero-image">
-        <img :src="hero.image" :alt="hero.alt || 'Hero image'" />
+    <div class="tv-hero" :class="{ 'tv-hero-full': !hero.image && !$slots.image }">
+      <div v-if="hero.image || $slots.image" class="tv-hero-image">
+        <slot name="image">
+          <img :src="hero.image" :alt="hero.alt || 'Hero image'" />
+        </slot>
       </div>
       <div class="tv-hero-content">
         <h1 class="tv-hero-title">
-          {{ hero.title }}
+          <slot name="title">
+            {{ hero.title }}
+          </slot>
           <span class="tv-hero-separator" :style="custom?.bgAfter"></span>
         </h1>
-        <p class="tv-hero-description">
-          {{ hero.description }}
-        </p>
-        <div v-if="!isEntry && hero.button" class="tv-hero-actions">
-          <tv-button
-            rounded
-            :customStyle="custom?.customButton"
-            @click-button="handleClick"
-          >
-            {{ hero.button }}
-          </tv-button>
-          <tv-button
-            v-if="hero.buttonSecondary"
-            rounded
-            outlined
-            :customStyle="custom?.customButtonSecondary"
-            @click-button="handleClickSecondary"
-          >
-            {{ hero.buttonSecondary }}
-          </tv-button>
+        <div class="tv-hero-description">
+          <slot name="description">
+            {{ hero.description }}
+          </slot>
+        </div>
+        <div
+          v-if="!isEntry && (hero.button || hero.buttonSecondary || $slots.actions)"
+          class="tv-hero-actions"
+        >
+          <slot name="actions">
+            <tv-button
+              v-if="hero.button"
+              rounded
+              :customStyle="custom?.customButton"
+              @click-button="handleClick"
+            >
+              {{ hero.button }}
+            </tv-button>
+            <tv-button
+              v-if="hero.buttonSecondary"
+              rounded
+              outlined
+              :customStyle="custom?.customButtonSecondary"
+              @click-button="handleClickSecondary"
+            >
+              {{ hero.buttonSecondary }}
+            </tv-button>
+          </slot>
         </div>
       </div>
     </div>

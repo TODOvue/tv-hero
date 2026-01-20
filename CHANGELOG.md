@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Introduced slot support to allow for fully customizable content within components.
+
+### Changed
+- Updated the documentation to include instructions and examples for implementing the new slot functionality.
+
 ### Dependencies
 - Updated the `@todovue/tv-demo` dependency to `^1.4.4`.
 - Updated the `@todovue/tv-button` dependency to `^1.2.4`.

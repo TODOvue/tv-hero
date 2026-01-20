@@ -5,6 +5,7 @@ import EntryHero from "./demos/entryHero.vue?raw";
 import EntryHeroCustom from "./demos/entryHeroCustom.vue?raw";
 import EntryWithoutImage from "./demos/entryWithoutImage.vue?raw";
 import EntryWithoutImageCustom from "./demos/entryWithoutImageCustom.vue?raw";
+import WithSlots from "./demos/withSlots.vue?raw";
 
 export const demos = [
   {
@@ -132,5 +133,19 @@ export const demos = [
       },
     },
     html: EntryWithoutImageCustom,
+  },
+  {
+    id: 8,
+    title: "TODOvue hero with Slots",
+    description: "Hero showing the power of Slots for full customization.",
+    propsData: {
+      configHero: {
+        title: "Original Title",
+        description: "Original Description",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763663056/uqqtkgp1lg3xdplutpga.png",
+        alt: "TODOvue Logo",
+      },
+    },
+    html: WithSlots,
   },
 ];
