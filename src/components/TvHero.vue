@@ -43,7 +43,7 @@ const { handleClick, handleClickSecondary, custom, hero } = useHero(props, emit)
         </p>
         <div v-if="!isEntry && hero.button" class="tv-hero-actions">
           <tv-button
-            isRounded
+            rounded
             :customStyle="custom?.customButton"
             @click-button="handleClick"
           >
@@ -51,8 +51,8 @@ const { handleClick, handleClickSecondary, custom, hero } = useHero(props, emit)
           </tv-button>
           <tv-button
             v-if="hero.buttonSecondary"
-            isRounded
-            isOutlined
+            rounded
+            outlined
             :customStyle="custom?.customButtonSecondary"
             @click-button="handleClickSecondary"
           >

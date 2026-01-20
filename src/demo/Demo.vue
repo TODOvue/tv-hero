@@ -10,6 +10,7 @@ const TvHero = defineAsyncComponent(/* webpackChunkName: "TvHero" */() => import
   <TvDemo
     :component="TvHero"
     :variants="demos"
+    :manual-emits="['clickButton', 'clickSecondaryButton']"
     hide-background
     component-name="TvHero"
     npm-install="@todovue/tv-hero"
