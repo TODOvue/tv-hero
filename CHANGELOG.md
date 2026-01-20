@@ -5,6 +5,24 @@ All notable changes to `@todovue/tv-hero` will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-01-20
+
+### Added
+- Introduced slot support to allow for fully customizable content within components.
+- Introduced the `imagePosition` property to provide granular control over layout placement.
+- Added a reverse layout option to allow for flexible positioning of image and text elements.
+- Introduced the `isBackgroundImage` property to enable background image support for components.
+- Implemented computed styles to manage background image rendering and positioning dynamically.
+
+### Changed
+- Updated the documentation to include instructions and examples for implementing the new slot functionality.
+
+### Dependencies
+- Updated the `@todovue/tv-demo` dependency to `^1.4.4`.
+- Updated the `@todovue/tv-button` dependency to `^1.2.4`.
+- Updated the `sass` dependency to `^1.97.2`.
+- Updated the `vite` dependency to `^7.3.1`.
+
 ## [1.1.3] - 2025-12-20
 
 ### Fixed
@@ -88,6 +106,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Entry hero without image
   - Various customization examples
 
+[1.2.0]: https://github.com/TODOvue/tv-hero/pull/8/files
 [1.1.3]: https://github.com/TODOvue/tv-hero/pull/7/files
 [1.1.2]: https://github.com/TODOvue/tv-hero/pull/6/files
 [1.1.1]: https://github.com/TODOvue/tv-hero/pull/5/files

@@ -10,12 +10,13 @@ const TvHero = defineAsyncComponent(/* webpackChunkName: "TvHero" */() => import
   <TvDemo
     :component="TvHero"
     :variants="demos"
+    :manual-emits="['clickButton', 'clickSecondaryButton']"
     hide-background
     component-name="TvHero"
     npm-install="@todovue/tv-hero"
     source-link="https://github.com/TODOvue/tv-hero"
     url-clone="https://github.com/TODOvue/tv-hero.git"
-    version="1.1.3"
+    version="1.2.0"
   />
 </template>
 

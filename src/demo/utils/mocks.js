@@ -5,6 +5,9 @@ import EntryHero from "./demos/entryHero.vue?raw";
 import EntryHeroCustom from "./demos/entryHeroCustom.vue?raw";
 import EntryWithoutImage from "./demos/entryWithoutImage.vue?raw";
 import EntryWithoutImageCustom from "./demos/entryWithoutImageCustom.vue?raw";
+import WithSlots from "./demos/withSlots.vue?raw";
+import RightImage from "./demos/rightImage.vue?raw";
+import BackgroundImage from "./demos/backgroundImage.vue?raw";
 
 export const demos = [
   {
@@ -132,5 +135,53 @@ export const demos = [
       },
     },
     html: EntryWithoutImageCustom,
+  },
+  {
+    id: 8,
+    title: "TODOvue hero with Slots",
+    description: "Hero showing the power of Slots for full customization.",
+    propsData: {
+      configHero: {
+        title: "Original Title",
+        description: "Original Description",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763663056/uqqtkgp1lg3xdplutpga.png",
+        alt: "TODOvue Logo",
+      },
+    },
+    html: WithSlots,
+  },
+  {
+    id: 9,
+    title: "TODOvue hero with right image",
+    description: "Hero showing the image on the right side.",
+    propsData: {
+      configHero: {
+        title: "Right Aligned Image",
+        description:
+          "This hero has the image positioned on the right side using the new imagePosition prop.",
+        button: "Action",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763663056/uqqtkgp1lg3xdplutpga.png",
+        alt: "TODOvue Logo",
+      },
+      imagePosition: "right",
+    },
+    html: RightImage,
+  },
+  {
+    id: 10,
+    title: "TODOvue hero with background image",
+    description: "Hero showing the image as a background with overlay.",
+    propsData: {
+      configHero: {
+        title: "Background Image Mode",
+        description:
+          "This hero uses the image as a background with an automatic overlay for better readability.",
+        button: "Call to Action",
+        image: "https://res.cloudinary.com/denj4fg7f/image/upload/v1767664201/magical_vue_coding_laboratory_p1incq.jpg",
+        alt: "TODOvue",
+      },
+      isBackgroundImage: true,
+    },
+    html: BackgroundImage,
   },
 ];
