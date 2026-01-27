@@ -4,7 +4,7 @@
   "author": "Cristhian Daza",
   "description": "A customizable hero component for TODOvue, featuring responsive design, multiple layout options, and call-to-action support.",
   "license": "MIT",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "type": "module",
   "homepage": "https://ui.todovue.blog/hero",
   "repository": {
